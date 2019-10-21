@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2019_10_21_193304) do
     t.string "title"
     t.string "description"
     t.string "creator"
-    t.boolean "open_status"
+    t.boolean "open_status", default: true
     t.datetime "resolved_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

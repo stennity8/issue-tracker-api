@@ -4,7 +4,7 @@ class CreateIssues < ActiveRecord::Migration[6.0]
       t.string :title
       t.string :description
       t.string :creator
-      t.boolean :open_status
+      t.boolean :open_status, default: true
       t.datetime :resolved_date
 
       t.timestamps
