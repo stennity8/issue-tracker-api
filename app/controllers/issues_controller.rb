@@ -5,6 +5,12 @@ class IssuesController < ApplicationController
     render json: issues
   end
 
+  def show
+    issue = Issue.find(params[:id])
+
+    render json: issue
+  end
+
   def issue_comments
     issue = Issue.find_by(id: params[:issue_id])
     comments = issue.comments
