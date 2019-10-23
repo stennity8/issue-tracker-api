@@ -5,6 +5,18 @@ class Api::V1::IssuesController < ApplicationController
     render json: issues
   end
 
+  def open_issues
+    issues = Issue.unresolved
+
+    render json: issues
+  end
+
+  def closed_issues
+    issues = Issue.resolved
+
+    render json: issues
+  end
+
   def show
     issue = Issue.find(params[:id])
 
