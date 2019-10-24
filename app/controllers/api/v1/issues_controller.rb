@@ -30,6 +30,12 @@ class Api::V1::IssuesController < ApplicationController
     render json: comments
   end
 
+  def create
+    issue = Issue.create(issue_params)
+
+    render json: issue
+  end
+
   private 
 
   def issue_params
