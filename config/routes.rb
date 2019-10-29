@@ -4,7 +4,7 @@ Rails.application.routes.draw do
       get 'issues/open', to: 'issues#open_issues'
       get 'issues/closed', to: 'issues#closed_issues'
       resources :comments
-      resources :issues, only: [:index, :show, :create, :updated, :destroy] do
+      resources :issues, only: [:index, :show, :create, :update, :destroy] do
         get 'comments', to: 'issues#issue_comments'
       end
     end

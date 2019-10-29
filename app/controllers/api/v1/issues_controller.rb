@@ -36,9 +36,17 @@ class Api::V1::IssuesController < ApplicationController
     render json: issue
   end
 
+  def update
+    issue = Issue.find(issue_params[:id])
+    issue.open_status = false
+    issue.save
+    
+    render json: issue
+  end
+
   private 
 
   def issue_params
-    params.require(:issue).permit(:title, :description, :creator, :open_status, :resolved_date)
+    params.require(:issue).permit(:title, :description, :creator, :open_status, :resolved_date, :id)
   end
 end
