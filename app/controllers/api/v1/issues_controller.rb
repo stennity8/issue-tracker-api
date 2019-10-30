@@ -39,9 +39,17 @@ class Api::V1::IssuesController < ApplicationController
   def update
     issue = Issue.find(params[:id])
     issue.update(issue_params)
-    issue.resolved_date = Time.now
     issue.save
     
+    render json: issue
+  end
+
+  def destroy
+    issue = Issue.find(params[:id])
+    # Delete comments before deleting issue
+    issue.comments.each{|comment| comment.destroy}
+    issue.destroy
+
     render json: issue
   end
 
