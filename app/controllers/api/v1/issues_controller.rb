@@ -37,8 +37,9 @@ class Api::V1::IssuesController < ApplicationController
   end
 
   def update
-    issue = Issue.find(issue_params[:id])
-    issue.open_status = false
+    issue = Issue.find(params[:id])
+    issue.update(issue_params)
+    issue.resolved_date = Time.now
     issue.save
     
     render json: issue
