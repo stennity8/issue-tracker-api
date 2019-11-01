@@ -8,7 +8,7 @@
 Issue.destroy_all
 Comment.destroy_all
 
-3.times do
+10.times do
     Issue.create(
     title: Faker::Hipster.sentence(word_count: 3),
     description: Faker::Hacker.say_something_smart,
@@ -16,9 +16,9 @@ Comment.destroy_all
   )
 end
 
-  10.times do
+  50.times do
     Comment.create(
-    issue_id: Faker::Number.between(from: 1, to: 3),
+    issue_id: Faker::Number.between(from: 1, to: 10),
     description: Faker::Hacker.say_something_smart,
     commentor: Faker::FunnyName.name 
   )
