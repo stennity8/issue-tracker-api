@@ -2,9 +2,9 @@
 
 ---
 
-### Issue Tracker API handles the backend for the Issue Tracker application.  This Issue Tracker stores issues created by users.  User can add comments to issues until they are ready to resolve the issue.  Resolved issues can be viewed and re-opened if needed.
+### Issue Tracker API handles the back-end for the Issue Tracker application.  This Issue Tracker stores issues created by users.  User can add comments to issues until they are ready to resolve the issue.  Resolved issues can be viewed and re-opened if needed.
 
-GitHub for FrontEnd: `https://github.com/stennity8/issue-tracker-frontend.git`
+GitHub for Front-end: `https://github.com/stennity8/issue-tracker-frontend.git`
 
 Heroku link: COMING SOON
 
